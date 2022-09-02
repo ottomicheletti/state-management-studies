@@ -1,41 +1,99 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.background {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(0,212,255);
+  background: linear-gradient(135deg, rgba(0,212,255,1) 0%, rgba(224,126,45,1) 100%);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.calculator {
+  border-radius: 15px;
+  height: 420px;
+  width: 300px;
+  background-color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.display {
+  width: 100%;
+  height: 140px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.card {
-  padding: 2em;
+.lastOperation {
+  text-align: right;
+  width: 270px;
+  height: 30%;
+  border: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 15px;
 }
 
-.read-the-docs {
-  color: #888;
+.input {
+  width: 270px;
+  height: 70%;
+  margin: 0 15px;
+  border: none;
+  text-align: right;
+  outline: none;
+  caret-color: transparent;
+  font-size: xx-large;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.keys {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  width: 100%;
+  height: 280px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2px;
+}
+
+.button:nth-child(1) {
+  background-color: rgb(247, 111, 90);
+}
+
+.op {
+  background-color: rgb(206, 203, 203);
+}
+
+.button:nth-child(18) {
+  background-color: rgb(108, 180, 225);
+}
+
+.button {
+  width: 60px;
+  height: 48px;
+  border-radius: 5px;
+  border: none;
+  font-size: larger;
+  cursor: pointer;
+}
+
+.button:hover {
+  outline: auto;
+}
+
+.double {
+  width: 130px;
 }
